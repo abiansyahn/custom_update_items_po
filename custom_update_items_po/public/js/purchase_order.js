@@ -2,7 +2,6 @@ frappe.provide("erpnext.utils")
 frappe.provide("erpnext.buying");
 
 erpnext.utils.update_child_items = function (opts) {
-    console.log("custom update_child_items");
 	const frm = opts.frm;
 	const cannot_add_row = typeof opts.cannot_add_row === "undefined" ? true : opts.cannot_add_row;
 	const child_docname = typeof opts.cannot_add_row === "undefined" ? "items" : opts.child_docname;
@@ -126,7 +125,15 @@ erpnext.utils.update_child_items = function (opts) {
 				default: 0,
 				read_only: 0,
 				label: __("Item Name"),
-				in_list_view: 1
+				in_list_view: 0
+		});
+		fields.splice(3, 0, {
+			fieldtype: "Text Editor",
+			fieldname: "description",
+			label: __("Description"),
+			read_only: 0,
+			in_list_view: 1
+
 		});
 		fields.splice(3, 0, {
 			fieldtype: "Float",
