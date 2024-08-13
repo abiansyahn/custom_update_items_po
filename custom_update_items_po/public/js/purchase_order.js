@@ -96,6 +96,7 @@ erpnext.utils.update_child_items = function (opts) {
 			default: 0,
 			read_only: 0,
 			in_list_view: 1,
+			columns: 1,
 			label: __("Qty"),
 			precision: get_precision("qty"),
 		},
@@ -106,6 +107,7 @@ erpnext.utils.update_child_items = function (opts) {
 			default: 0,
 			read_only: 0,
 			in_list_view: 1,
+			columns: 1,
 			label: __("Rate"),
 			precision: get_precision("rate"),
 		},
@@ -125,7 +127,7 @@ erpnext.utils.update_child_items = function (opts) {
 				default: 0,
 				read_only: 0,
 				label: __("Item Name"),
-				in_list_view: 0
+				in_list_view: 1
 		});
 		fields.splice(3, 0, {
 			fieldtype: "Text Editor",
