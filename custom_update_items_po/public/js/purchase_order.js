@@ -15,6 +15,7 @@ erpnext.utils.update_child_items = function (opts) {
 			name: d.name,
 			item_code: d.item_code,
 			item_name: d.item_name,
+			description: d.description,
 			delivery_date: d.delivery_date,
 			schedule_date: d.schedule_date,
 			conversion_factor: d.conversion_factor,

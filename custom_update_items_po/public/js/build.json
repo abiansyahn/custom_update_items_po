@@ -1,0 +1,5 @@
+{
+	"js/custom_update_items_po.min.js": [
+		"public/js/purchase_order.js"
+	]
+}
