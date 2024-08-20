@@ -218,7 +218,7 @@ erpnext.utils.update_child_items = function (opts) {
 		update_items: function () {
 			const trans_items = this.get_values()["trans_items"].filter((item) => !!item.item_code);
 			frappe.call({
-				method: "erpnext.controllers.accounts_controller.update_child_qty_rate",
+				method: "custom_update_items_po.custom_update_items_po.accounts_controller.update_child_qty_rate",
 				freeze: true,
 				args: {
 					parent_doctype: frm.doc.doctype,
